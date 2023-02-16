@@ -1,13 +1,19 @@
-# Assignments Week 2
+# Assignments Week 5
 # Introduction
-The aim of this assignment is for you to become familiar with proteomics databases like PRIDE. By taking advantage of programmatic access to these databases, you can screen for the datasets that contain the information that you are looking for. While some details will need to be extracted manually in the end, this exercise will also give you additional starting points for the group project.
+The goal of this assignment is to navigate through the measurement file from an HPLC-MS/MS analysis. Working through the tasks, you will look at both the chromatography part, as well as some mass spectra, combining both levels of information.
 # Input data
-1)	Use programmatic access to PRIDE (e.g. pridepy) to find all datasets corresponding to a species of your choice. Count and report the number of datasets.
-2)	For each dataset, extract the information about which instrument was used for the measurements. Generate a plot showing the number of datasets for each of the instruments.
-3)	Choose one (or more, if you like) dataset to look into the details about the sample and data processing. Summarize information that you consider relevant for the reanalysis of the dataset, e.g. the cell lysis method that has been used, any type of sample purification or chromatographic separation, parameters used for the mass spectrometric measurements. This task likely needs to be done manually (though I would be excited to see a programmatic approach), but everything else should be done programmatically.
-4)	Make sure to comment your code, so that others can read and understand it easily. 
-5)	Create a README file describing how to run your code. Include requirements (e.g. Python packages that need to be installed) in that description, or as a separate requirements.txt file.
-6)	Commit all your input files, scripts, and result files to your GitHub Classroom repository.
+An .mzML file, the standard data format for HPLC-MS/MS runs, has been uploaded to myCourses. In addition, you can download the reference proteome for Haloferax volcanii, the model archaeon that has been analyzed in this HPLC-MS/MS run from UniProt.
+# Tasks and output files
+1)	Plot the total ion chromatogram (TIC), i.e. the intensity of all ions over time. You can use existing modules like pymzML.
+2)	Plot an MS1 spectrum from the middle of the HPLC-MS/MS run (around 30 +/- 10 min). How many peaks are in that spectrum?
+3)	The S-layer glycoprotein (CSG, UniProt ID P25062) is the sole component of the archaeal S-layer. A tryptic peptide from the CSG is VTAHILSVGR. Calculate the m/z for this peptide (using a charge of 2) – you can use existing modules like pyteomics, or create your own function for m/z calculation.
+4)	Search for the VTAHILSVGR2+ ion in all MS1 spectra of the HPLC-MS/MS run. Extract the corresponding ion intensities and plot the chromatogram representing this peptide (ion intensities over time, also referred to as ion chromatogram).
+5)	Make sure to comment your code, so that others can read and understand it easily. 
+6)	Create a README file describing how to run your code. Include requirements (e.g. Python packages that need to be installed) in that description, or as a separate requirements.txt file.
+7)	Commit all your input files, scripts, and result files to your GitHub Classroom repository.
 # Submission
-You must submit the assignment through GitHub Classroom by 8 am Feb 2 to get full credit. 
+You must submit the assignment through GitHub Classroom by 8 am Feb 23 to get full credit. 
+# Bonus Credit
+8)	From your previous assignments, use the functions to parse the Haloferax volcanii .fasta file, extract the protein sequence for CSG, and digest the whole protein into tryptic peptides. How many of those peptides can be found (on the MS1 level, assuming charges from 2 to 4) in the HPLC-mS/MS run? For each of those peptides, extract the ion chromatogram.
+
 
