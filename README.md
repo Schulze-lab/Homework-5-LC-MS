@@ -10,7 +10,7 @@ An .idx.gz file with mass spectrometric raw data (from dataset PXD006121) has be
 4)	Plot the spectrum and highlight at least one matched peak in the spectrum by including a peak for the theoretical m/z of the matched peptide ion.
 5)	Make sure to comment your code, so that others can read and understand it easily. 
 6)	Create a README file describing how to run your code. Include requirements (e.g. Python packages that need to be installed) in that description, or as a separate requirements.txt file.
-7)	Commit all your input files, scripts, and result files to your GitHub Classroom repository.
+7)	Commit all your scripts and result files to your GitHub Classroom repository.
 # Additional MS student tasks (bonus credit for BS students)
 8)	Use the retention times predicted by DeepLC (Nm_peptides_deeplc_predictions.csv), and calculate how many overlapping m/z values would occur at each second of the chromatography? Feel free to use lab3_results.py as a starting point, and generate a plot with the number of overlapping peaks over retention time.
 # Submission
